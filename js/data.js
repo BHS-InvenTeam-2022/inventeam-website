@@ -204,7 +204,7 @@ function chartIt(xs, ys, inputtype) {
       };
 
     //animation code begin here
-    const totalDuration = 5000;
+    const totalDuration = 4000;
     const delayBetweenPoints = totalDuration / xs.length;
     const previousY = (ctx) => ctx.index === 0 ? ctx.chart.scales.y.getPixelForValue(100) : ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y'], true).y;
     const animation = {

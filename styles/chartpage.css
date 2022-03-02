@@ -2,23 +2,46 @@ body {
     background: rgb(100, 100, 100);
 }
 
-section {
-    margin: 20px 20px;
-    background: rgb(0, 158, 132);
-    display: flex;    
-    justify-content: center;
-    border-radius: 10px;
+.title1{grid-area: title1;}
+.title2{grid-area: title2;}
+.filesubmit{grid-area: btn5;}
+.opt1{grid-area: opt1;}
+.opt2{grid-area: opt2;}
+.opt3{grid-area: opt3;}
+.lbl1{grid-area: lbl1;}
+.lbl2{grid-area: lbl2;}
+.btn1{grid-area: btn1;}
+.btn2{grid-area: btn2;}
+.ipt1{grid-area: ipt1;}
+.ipt2{grid-area: ipt2;}
+.api-btn{grid-area: btn3;}
+.date-range{grid-area: span1;}
+
+
+.mygridarea{
+    display: grid;
+    grid-template-areas:
+    'title1 . spacer . title2 title2'
+    'btn5 . . opt1 lbl1 ipt1'
+    'btn1 . . opt2 lbl2 ipt2'
+    'btn2 . . opt3 span1 span1'
+    '. . . . . btn3';
+    grid-gap: 15px;
+    background-color: #1c7436;
+    padding: 10px;    
+    
+    column-gap: 20px;
 }
 
 .cool-btn {
     background-color: #4caf50; /* Green */
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 15px;
 }
 .cool-btn:hover {
@@ -26,10 +49,7 @@ section {
     color: black;
 }
 
-.column-btn {
-    display: flex;
-    flex-direction: column;
-}
+
 
 .container {
     display: block;
@@ -96,11 +116,26 @@ section {
     background: white;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    margin: auto 15px;
-}
+
 .api-btn{
     margin: auto 5px;
+}
+
+@media only screen and (max-width: 700px) {
+    .mygridarea{        
+        grid-template-areas:
+        'title1 . .'
+        'btn5 . .'
+        'btn1 btn2 .'
+        ' . . .'
+        'title2 . . '
+        'opt1 opt2 opt3'
+        'lbl1 ipt1 .'
+        'lbl2 ipt2 .'
+        'span1 btn3 .';
+        grid-gap: 10px;
+        background-color: #1c7436;
+        padding: 5px;
+        column-gap: 10px;
+    }
 }

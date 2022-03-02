@@ -30,42 +30,44 @@
         </div>
     </nav>
 
-    <section>
+    <div class="mygridarea">
+        <h2 class="title1">Uploading Files</h2>
+        <input type="file" name="datainputbtn" id="datainputbtn" class="filesubmit">
 
-        <input type="file" name="datainputbtn" id="datainputbtn">
-        <div class="column-btn">
-            <button class="cool-btn" id="submitbtn" onclick="uploadData()">Submit To API</button>
-            <button class="cool-btn" id="submitbtn-2" onclick="readFromUpload()">Graph Uploaded Data</button>
-        </div>
+        <button class="btn1 cool-btn" id="submitbtn" onclick="uploadData()">Submit To API</button>
+        <button class="btn2 cool-btn" id="submitbtn-2" onclick="readFromUpload()">Graph Uploaded Data</button>
 
-    </section>
+        
 
-    <section>
-        <div class="wrapper">
-            <label class="container">Temperature
-                <input type="radio" id="temp" name="datatype" value="temp">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">pH
-                <input type="radio" id="ph" name="datatype" value="ph" checked>
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">Salinity
-                <input type="radio" id="salinity" name="datatype" value="salinity">
-                <span class="checkmark"></span>
-            </label>
-        </div>
+        <h2 class="title2">Retrieving Files</h2>
+        <label class="container opt1">Temperature
+            <input type="radio" id="temp" name="datatype" value="temp">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container opt2">pH
+            <input type="radio" id="ph" name="datatype" value="ph" checked>
+            <span class="checkmark"></span>
+        </label>
+        <label class="container opt3">Salinity
+            <input type="radio" id="salinity" name="datatype" value="salinity">
+            <span class="checkmark"></span>
+        </label>
 
-        <div class="wrapper">
-            <label for="start">StartTime:</label>
-            <input type="datetime-local" id="startdate" name="timerange" required>
-            <label for="end">EndTime:</label>
-            <input type="datetime-local" id="enddate" name="timerange" required><br>
-            <span id="date-range"></span>
-        </div>
 
-        <button class="cool-btn api-btn" id="accessbtn" onclick="getchoice()">Get Data from Api</button><br>
-    </section>
+
+        <label for="start" class="lbl1">StartTime:</label>
+        <input type="datetime-local" id="startdate" name="timerange" class="ipt1" value="2021-12-16T08:00" required>
+        <label for="end" class="lbl2">EndTime:</label>
+        <input type="datetime-local" id="enddate" name="timerange" class="ipt2" value="2021-12-17T10:00" required><br>
+        <span id="date-range" class="date-range"></span>
+
+
+        <button class="api-btn cool-btn" id="accessbtn" onclick="getchoice()">Get Data from Api</button><br>
+    </div>
+
+
+
+
 
 
     <div class="chart-container" style="position: relative; height:95vh; width:95vw;margin:10px auto">
