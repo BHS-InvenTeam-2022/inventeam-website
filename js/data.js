@@ -10,6 +10,17 @@ document.getElementById('datainputbtn').addEventListener('change', function (e) 
     })();
 });
 
+document.addEventListener("DOMContentLoaded", function(){
+    let eggnames = document.getElementById('eggs')
+    let names = sessionStorage.getItem('Eggnames');
+    names = names.split("/")
+    for (let i = 0; i < names.length; i++) {
+        option = document.createElement('option');
+        option.value = option.text = names[i];
+        eggnames.add(option);        
+    }
+});
+
 function uploadData() {
     parseforapi(fileContent);
 }

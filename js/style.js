@@ -10,7 +10,7 @@ window.onload = function userRegister() {
     if(sessionStorage){
         if(sessionStorage.getItem("Username")){
             loginbtn.textContent = sessionStorage.getItem("Username");
-            loginbtn.href = "javascript:void(0)";
+            loginbtn.href = "./profile.html";
         }
     }
 }
