@@ -83,10 +83,10 @@ html {
 
 .text-section{
     position: relative;
-    
+   
     width: 100%;
     padding: 20px 50px;
-    min-height: 200px;    
+    min-height: 100vh;    
 }
 
 .text-section:nth-child(odd){
