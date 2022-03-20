@@ -80,6 +80,7 @@ function getchoice() {
     }
     let ele = document.getElementsByName('datatype');
     let eggId = sessionStorage.getItem("EggId");
+    let username = sessionStorage.getItem("Username")
     let datatype;
     for (i = 0; i < ele.length; i++) {
         if (ele[i].checked)
@@ -96,7 +97,7 @@ function getchoice() {
         enddate = new Date(enddate);
     }
 
-    var datastring = `${url}?eggId=${eggId}&datatype=${datatype}`
+    var datastring = `${url}?eggId=${eggId}&datatype=${datatype}&username=${username}`
 
     const response = new XMLHttpRequest();
     response.open("GET", datastring)
@@ -112,7 +113,7 @@ function getchoice() {
             let starti = null;
             let endi = null;
             let clock_x = data.clock_data.split(";");
-            clock_x.pop() //last lement always null       
+            clock_x.pop() //last element always null       
             clock_x = clock_x.map(function (ele) {
                 ele = ele.slice(0, -1)
                 return ele

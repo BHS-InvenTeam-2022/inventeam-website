@@ -10,7 +10,6 @@ function validate() {
         "username": username,
         "password": password,
         "eggId":username+"1",
-        "eggnames":"myprecious",
         "email": email
     }
     );
