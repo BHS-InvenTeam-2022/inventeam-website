@@ -10,17 +10,40 @@ document.getElementById('datainputbtn').addEventListener('change', function (e) 
     })();
 });
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     let eggnames = document.getElementById('eggs')
     let names = sessionStorage.getItem('Eggnames');
     names = names.split("/")
     for (let i = 0; i < names.length; i++) {
         option = document.createElement('option');
         option.value = option.text = names[i];
-        eggnames.add(option);        
+        eggnames.add(option);
     }
+    updateDatatypes();
 });
 
+function updateDatatypes() {
+    let sensortype = doumet.getElementById("eggs");
+    console.log(sensortype.value);
+
+    if (sensortype.value.substring(0, 2) == "ss") {
+        document.getElementById("opt1").style.display = "block";
+        document.getElementById("opt2").style.display = "block";
+        document.getElementById("opt3").style.display = "block";
+        document.getElementById("opt4").style.display = "none";
+    } else if (sensortype.value.substring(0, 2) == "as") {
+        document.getElementById("opt1").style.display = "none";
+        document.getElementById("opt2").style.display = "none";
+        document.getElementById("opt3").style.display = "none";
+        document.getElementById("opt4").style.display = "block";
+    } else {
+        document.getElementById("opt1").style.display = "block";
+        document.getElementById("opt2").style.display = "block";
+        document.getElementById("opt3").style.display = "block";
+        document.getElementById("opt4").style.display = "none";
+    }
+
+}
 function uploadData() {
     parseforapi(fileContent);
 }
@@ -199,6 +222,11 @@ function chartIt(xs, ys, inputtype) {
             minrange = 0;
             maxrange = 1;
             break;
+        case "angle":
+            typename = "Angle";
+            minrange = 0;
+            maxrange = 180;
+            break;
         default:
             break;
     }
@@ -206,14 +234,14 @@ function chartIt(xs, ys, inputtype) {
     const plugin = {
         id: 'custom_canvas_background_color',
         beforeDraw: (chart) => {
-          const ctx = chart.canvas.getContext('2d');
-          ctx.save();
-          ctx.globalCompositeOperation = 'destination-over';
-          ctx.fillStyle = 'rgba(250,250,250,0.8)';
-          ctx.fillRect(0, 0, chart.width, chart.height);
-          ctx.restore();
+            const ctx = chart.canvas.getContext('2d');
+            ctx.save();
+            ctx.globalCompositeOperation = 'destination-over';
+            ctx.fillStyle = 'rgba(250,250,250,0.8)';
+            ctx.fillRect(0, 0, chart.width, chart.height);
+            ctx.restore();
         }
-      };
+    };
 
     //animation code begin here
     const totalDuration = 4000;
@@ -272,7 +300,7 @@ function chartIt(xs, ys, inputtype) {
             },
             animation,
             responsive: true,
-            maintainAspectRatio:false,
+            maintainAspectRatio: false,
             interaction: {
                 intersect: false,
                 mode: 'nearest',
@@ -343,7 +371,7 @@ function chartIt(xs, ys, inputtype) {
             }
         },
         plugins: [plugin],
-    });    
+    });
 
 }
 
@@ -445,5 +473,5 @@ function readFromUpload() {
     clock = clock.slice(starti, endi);
     data_y = data_y.slice(starti, endi);
 
-    chartIt(clock, data_y,datatype);
+    chartIt(clock, data_y, datatype);
 }

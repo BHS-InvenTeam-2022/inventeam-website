@@ -17,6 +17,7 @@ body {
 .api-btn{grid-area: btn3;}
 .date-range{grid-area: span1;}
 .eggs{grid-area: dropdown;}
+.opt4{grid-area: opt4;display: none;}
 
 .mygridarea{
     display: grid;
@@ -130,7 +131,7 @@ body {
         ' . . .'
         'title2 . . '
         'opt1 opt2 opt3'
-        'lbl1 ipt1 .'
+        'lbl1 ipt1 dropdown'
         'lbl2 ipt2 .'
         'span1 btn3 .';
         grid-gap: 10px;
