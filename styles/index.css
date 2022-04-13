@@ -41,6 +41,7 @@ html {
 .text{
     position: relative;
     z-index: 10;
+
 }
 
 .text h4 {
@@ -48,6 +49,7 @@ html {
     font-weight: 800;
     line-height: 1em;
     text-transform: uppercase;
+
 }
 
 .text h3 {
@@ -90,16 +92,40 @@ html {
 }
 
 .text-section:nth-child(odd){
-    background: rgb(100,125,100);
+    background: rgb(19, 28, 37);
 }
 .text-section:nth-child(even){
-    background: rgb(50,75,50);
+    background: rgb(63, 92, 122, 1);
 }
 
 .text-section img{
     width: 90%;
     max-width: 500px;
 }
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: rgb(106, 157, 207, 1);
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgb(106, 157, 207, 1);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(67, 163, 163);
+  }
+  
+  /* selected link */
+  a:active {
+    color: rgb(106, 157, 207, 1);
+  }
+
 
 @media only screen and (max-width:600px){
     .showcase{
@@ -122,6 +148,7 @@ html {
     .text p{
         font-size: 1em;
         margin: 20px 0;
-        font-weight: 200;        
+        font-weight: 200; 
+            
     }
 }
