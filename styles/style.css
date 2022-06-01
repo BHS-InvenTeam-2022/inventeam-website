@@ -44,6 +44,7 @@ body{
 
 .navbar-links li:hover{
     background-color: #555;
+    font-size: 18px;
 }
 
 .toggle-button{

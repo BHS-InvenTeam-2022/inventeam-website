@@ -100,7 +100,8 @@ html {
 
 .text-section img{
     width: 90%;
-    max-width: 500px;
+    max-width: 900px;
+    border: 5px solid #111;
 }
 
 a {
