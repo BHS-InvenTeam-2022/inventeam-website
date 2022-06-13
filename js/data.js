@@ -1,5 +1,5 @@
 let fileContent;
-const url = 'http://127.0.0.1:8000/egg';
+const url = 'http://66.228.40.119/egg';
 var myChart;
 
 document.getElementById('datainputbtn').addEventListener('change', function (e) {
