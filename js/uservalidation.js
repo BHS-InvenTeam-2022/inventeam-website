@@ -1,4 +1,4 @@
-const url = 'https://66.228.40.119/user';
+const url = 'https://cors-anywhere.herokuapp.com/http://66.228.40.119/user';
 function validate() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
