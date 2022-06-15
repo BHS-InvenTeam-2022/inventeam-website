@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function updateDatatypes() {
-    let sensortype = documet.getElementById("eggs");
+    let sensortype = document.getElementById("eggs");
     console.log(sensortype.value);
 
     if (sensortype.value.substring(0, 2) == "ss") {
