@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,100&display=swap');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 535104d6df581d073e9d974fb7a9df9a63cafcd9
 body{
     
     background: url("../img/maxresdefault.jpg");
     background-size: cover;    
+}
+html {
+    scroll-behavior: smooth;
 }
 
 * {
