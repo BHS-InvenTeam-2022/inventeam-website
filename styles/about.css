@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,100&display=swap');
+
 main{
     font-family: 'Open sans', sans-serif;
     background: #333;
@@ -6,6 +8,14 @@ main{
     justify-content: center;
     min-height: 100vh;
     flex-wrap: wrap;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
 }
 
 .card{
